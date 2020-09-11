@@ -40,9 +40,12 @@
                     <div class="form-group row">
                         <label class="col-md-2">自己紹介欄</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="introduction" value="{{ old('i') }}">
+                            <input type="text" class="form-control" name="introduction" value="{{ old('introduction') }}">
                         </div>
                     </div>
+                    {{ csrf_field() }}
+                    <input type="submit" class="btn btn-primary" value="更新">
+                </form>
             </div>
         </div>
     </div>
