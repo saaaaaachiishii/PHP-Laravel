@@ -1,4 +1,3 @@
-<!DOCTYPE>
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -22,9 +21,8 @@
          <link href="https://fonts.googleapis.com/css?family=Releway:300,400,600" rel="stylesheet" type="text/css">
          
          <!-- Styles -->
-        {{-- Laravel標準で用意されているCSSを読み込みます --}}
         <link href="{{secure_asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/front.css') }}" rel="stylesheet">
     </head>
     <body>
         <div id="app">
