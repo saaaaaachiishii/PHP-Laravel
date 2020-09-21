@@ -10,13 +10,13 @@ class ProfileController extends Controller
 {
      public function index(Request $request)
     {
-        $profileposts = Profile::all()->sortByDesc('updated_at');
+        $profiles = Profile::all()->sortByDesc('updated_at');
 
-        if (count($profileposts) > 0) {
-            $headline = $profileposts->shift();
+        if (count($profiles) > 0) {
+            $headline = $profiles->shift();
         } else {
             $headline = null;
         }
-        return view('profile.index', ['headline' => $headline, 'posts' => $profileposts]);
+        return view('profile.index', ['headline' => $headline, 'posts' => $profiles]);
     }
 }
