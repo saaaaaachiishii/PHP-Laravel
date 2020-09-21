@@ -12,11 +12,6 @@ class ProfileController extends Controller
     {
         $profiles = Profile::all()->sortByDesc('updated_at');
 
-        if (count($profiles) > 0) {
-            $headline = $profiles->shift();
-        } else {
-            $headline = null;
-        }
-        return view('profile.index', ['headline' => $headline, 'posts' => $profiles]);
+        return view('profile.index', [ 'posts' => $profiles]);
     }
 }
